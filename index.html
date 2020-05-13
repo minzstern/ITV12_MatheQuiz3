@@ -3,54 +3,78 @@
 <head>
     <script src="javascript/speicher/speicher.js"></script>
     <script src="javascript/fragen/fragen.js"></script>
-    <script src="javascript/speicher/OLD_speicher.js"></script>
-    
+    <script src="javascript/oberflaeche/oberflaeche.js"></script>
+    <script src="javascript/speicher/speicher_fixed.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+
 
     <title>Mathematik Quiz</title>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td>
-                <div id="feld1">1</div>
-            </td>
-            <td>
-                <div id="feld2">2</div>
-            </td>
-            <td>
-                <div id="feld3">3</div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div id="feld4">4</div>
-            </td>
-            <td>
-                <div id="feld5">5</div>
-            </td>
-            <td>
-                <div id="feld6">6</div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div id="feld7">7</div>
-            </td>
-            <td>
-                <div id="feld8">8</div>
-            </td>
-            <td>
-                <div id="feld9">9</div>
-            </td>
-        </tr>
-    </table>
-    
-<input type = "button" id ="naechsterZug" value="naechsterZug" onclick="weiter()">
+    <div>
+        <h2 class="text-center">Mathequiz ITV12</h2>
+    </div>
 
-<input type = "button" id ="neuesSpiel" value="neues Spiel" onclick="neu()">
+    <div class="mx-auto" style="width: 70%;">
+        <table class="table table-bordered text-center bg-secondary" style="table-layout: fixed">
+            <tr>
+                <td>
+                    <div id="feld1">Frage 1</div>
+                </td>
+                <td>
+                    <div id="feld2">Frage 2</div>
+                </td>
+                <td>
+                    <div id="feld3">Frage 3</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="feld4">Frage 4</div>
+                </td>
+                <td>
+                    <div id="feld5">Frage 5</div>
+                </td>
+                <td>
+                    <div id="feld6">Frage 6</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="feld7">Frage 7</div>
+                </td>
+                <td>
+                    <div id="feld8">Frage 8</div>
+                </td>
+                <td>
+                    <div id="feld9">Frage 9</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div class="input-group mb-3 col-lg-4 col-lg-offset-4" style="margin:auto">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-primary" id="BtnAntwort" type="button0" onclick="eingabebutton()">Antwort</button>
+        </div>
+        <input type="text" id="Antwort" class="form-control" placeholder="Deine Antwort">
+    </div>
+
+    <br>
+    <div class="text-center">
+        <input type="button" id="naechsterZug" value="naechster Zug" onclick="weiter()" class="btn btn-primary">
+
+        <input type="button" id="neuesSpiel" value="neues Spiel" onclick="neu()" class="btn btn-primary">
+    </div>
 
 </body>
-<footer>Made By ITV12</footer>
+<br>
+<footer class="page-footer font-small blue fixed-bottom">
+    <div class="footer-copyright text-center py-3">
+        Made By ITV12
+    </div>
+</footer>
 
 </html>
